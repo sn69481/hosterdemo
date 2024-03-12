@@ -1,5 +1,4 @@
 
-
 module.exports = (sequelize, Sequelize) => {
     const Room = sequelize.define("room", {
       floor: {
@@ -9,7 +8,6 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.BOOLEAN,
         default:true, 
       },
-      
     });
   
     return Room;

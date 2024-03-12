@@ -1,19 +1,7 @@
 
-module.exports = (sequelize, Sequelize) => {
-    const RoomParticipant = sequelize.define("room_participants", {
-      name: {
-        type: Sequelize.STRING,
-        allowNull:false
-      },
-      email: {
-        type: Sequelize.STRING,
-        allowNull:false
-      },
-      mobile: {
-        type: Sequelize.INTEGER,
-        allowNull:false
-      }
-    });
-  
+module.exports = (sequelize, Sequelize,Student,Room) => {
+    const RoomParticipant = sequelize.define("room_participants", {});
+    RoomParticipant.belongsTo(Student);
+    RoomParticipant.belongsTo(Room);
     return RoomParticipant;
   };
